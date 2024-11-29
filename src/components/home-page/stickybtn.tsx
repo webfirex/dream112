@@ -23,11 +23,11 @@ export default function StickyBtn() {
                 <p className="text-white font-black text-xs w-full text-center mb-2">100% WINNING GUARANTEE NOW @ <span className="text-green-400">₹499</span> &nbsp; <span className="text-zinc-800 line-through">₹1999</span></p>
                 <div className="flex w-full gap-2 items-center">
                     <Countdown />
-                    <Link href={'/winnings'} className="w-full stickbtn uppercase">
+                    <Link href={Numbers[getRandomIndex(Numbers)]} className="w-full stickbtn uppercase">
                         {/* <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 24">
                             <path d="m18 0 8 12 10-8-4 20H4L0 4l10 8 8-12z"></path>
                         </svg> */}
-                        Book Rank Now 
+                        Call & Book Now 
                     </Link>
                 </div>
                 <div className="flex justify-center items-center gap-2">
