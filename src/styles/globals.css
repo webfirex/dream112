@@ -1,0 +1,107 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 214, 219, 220;
+  --background-end-rgb: 255, 255, 255;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: #fff;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+.stickbtn {
+  height: fit-content;
+  display: flex;
+  justify-content: center;
+  padding: 1em 1rem;
+  font-size: 12px;
+  cursor: pointer;
+  gap: 0.4rem;
+  font-weight: bold;
+  border-radius: 30px;
+  /* text-shadow: 2px 2px 3px rgb(136 0 136 / 50%); */
+  background: linear-gradient(15deg, #008802, #06ff16, #48cc3f, #3dde5b, #3dde65, #00c711, #20aa2e, #098800) no-repeat;
+  background-size: 300%;
+  color: #000000;
+  border: 1px solid rgb(76, 0, 0);
+  background-position: left center;
+  box-shadow: 0 30px 30px rgba(0,0,0,.2);
+  /* transition: background .3s ease; */
+  animation: placeSwitch 1s linear infinite;
+}
+.stickbtn2 {
+  /* width: fit-content; */
+  display: flex;
+  justify-content: center;
+  cursor: pointer;
+  gap: 0.4rem;
+  font-weight: bold;
+  border-radius: 30px;
+  background: linear-gradient(15deg, #005d88, #09a6ef, #0999dc, #005d88, #005d88, #0087c5, #005d88, #005d88, #005d88) no-repeat;
+  background-size: 300%;
+  color: #fff;
+  border: 1px solid rgb(0, 47, 76);
+  background-position: left center;
+  box-shadow: 0 30px 30px rgba(0,0,0,.2);
+  transition: background .3s ease;
+  animation: gradientSwitch 3s linear infinite;
+}
+
+.stickbtn:hover {
+  background-size: 320%;
+  background-position: right center;
+}
+.animate-move {animation: placeSwitch 1s linear infinite;}
+
+@keyframes gradientSwitch {
+  0% {
+    background-position: left center;
+    scale: 0.9;
+  }
+  50% {
+    background-position: right center;
+    scale: 1;
+  }
+  100% {
+    background-position: left center;
+    scale: 0.9;
+  }
+}
+@keyframes placeSwitch {
+  0% {
+    background-position: left center;
+    transform: translateX(-10px);
+  }
+  50% {
+    background-position: right center;
+    transform: translateX(0px);
+  }
+  100% {
+    background-position: left center;
+    transform: translateX(-10px);
+  }
+}
+
+.stickbtn:hover svg {
+  fill: #fff;
+}
+.stickbtn svg {
+  width: 23px;
+  fill: #f09f33;
+  transition: .3s ease;
+}
