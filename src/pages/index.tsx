@@ -69,6 +69,6 @@ export default function Home() {
         <CardsCarousel />
       </MantineProvider> */}
       {/* <StickyBtn /> */}
-    </main>
+    </main>  
   );
 }
