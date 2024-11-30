@@ -64,10 +64,10 @@ export default function Home() {
                 <img src={'jointgbtn.png'} alt='logo' className=' animate-move w-[200px]' />
             </Link>
       </Flex>
-      <UserReviews />
-      <MantineProvider>
+      {/* <UserReviews /> */}
+      {/* <MantineProvider>
         <CardsCarousel />
-      </MantineProvider>
+      </MantineProvider> */}
       {/* <StickyBtn /> */}
     </main>
   );
