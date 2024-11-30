@@ -50,7 +50,7 @@ export function CardsCarousel() {
   return (
     <Container size={'lg'}>
         <Carousel
-        slideSize={{ base: '50%', sm: '50%' }} slideGap="md" controlsOffset="xs" controlSize={20} loop>
+        slideSize={{ base: '50%', sm: '50%' }} slideGap="md" controlsOffset="xs" controlSize={20} loop className=' invisible'>
           {slides}
         </Carousel>
     </Container>

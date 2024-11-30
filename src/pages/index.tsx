@@ -25,7 +25,7 @@ function getRandomIndex(array: string[]): number {
 export default function Home() {
 
   return (
-    <main className={`flex relative min-h-screen flex-col items-center justify-between w-full max-[600px]:pt-[20px] pt-[30px] ${inter.className}`}>
+    <main className={`flex relative min-h-screen flex-col items-center w-full max-[600px]:pt-[20px] pt-[30px] ${inter.className}`}>
       <Particles
         className="absolute inset-0 max-[700px]:hidden"
         quantity={200}
@@ -65,10 +65,10 @@ export default function Home() {
             </Link>
       </Flex>
       {/* <UserReviews /> */}
-      {/* <MantineProvider>
+      <MantineProvider>
         <CardsCarousel />
-      </MantineProvider> */}
+      </MantineProvider>
       {/* <StickyBtn /> */}
-    </main>  
+    </main>
   );
 }
